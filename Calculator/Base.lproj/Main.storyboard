@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Pi7-DN-Hix" userLabel="Full Stack View">
+                                <rect key="frame" x="10" y="20" width="355" height="512.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VP1-mi-O1Z" userLabel="Zero Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="124.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6na-ZK-ktL" userLabel="Result Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="124.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6na-ZK-ktL" firstAttribute="centerY" secondItem="VP1-mi-O1Z" secondAttribute="centerY" id="BEV-pZ-sef"/>
+                                            <constraint firstItem="6na-ZK-ktL" firstAttribute="width" secondItem="VP1-mi-O1Z" secondAttribute="width" id="O4c-Cf-qNW"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hNo-EF-Dze" userLabel="First Line Stack View">
+                                        <rect key="frame" x="0.0" y="129.5" width="355" height="124.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZG-7x-AY6" userLabel="1 Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEP-ao-WbQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                        <color key="backgroundColor" red="0.66666203737258911" green="0.66666227579116821" blue="0.66666108369827271" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="updateResLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7rr-EJ-5fl"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEl-Jk-Gcm" userLabel="2 Stack View">
+                                                <rect key="frame" x="72" y="0.0" width="67" height="124.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0H-64-lix">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                        <color key="backgroundColor" red="0.66666203739999996" green="0.66666227580000004" blue="0.66666108369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="2"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="updateResLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ji-5J-JkI"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2X-CB-t4q" userLabel="3 View">
+                                                <rect key="frame" x="144" y="0.0" width="67" height="124.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkc-Ab-OMq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                        <color key="backgroundColor" red="0.66666203739999996" green="0.66666227580000004" blue="0.66666108369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="updateResLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFR-a1-MwG"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wb6-hw-KeR" userLabel="AC View">
+                                                <rect key="frame" x="216" y="0.0" width="67" height="124.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SV6-Ro-h57">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                        <color key="backgroundColor" red="0.93492454290390015" green="0.52994638681411743" blue="0.19976842403411865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                        <state key="normal" title="AC">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ACPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lnf-yG-pnN"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxU-Yk-UjA" userLabel="Neg Stack View">
+                                                <rect key="frame" x="288" y="0.0" width="67" height="124.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fg-oM-EmJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                        <color key="backgroundColor" red="0.93492454290000004" green="0.52994638679999995" blue="0.199768424" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                        <state key="normal" title="NEG">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="negPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gWI-w2-kPb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iq0-hV-bTU" userLabel="Second Line Stack View">
+                                        <rect key="frame" x="0.0" y="259" width="355" height="124"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="alw-wY-mfO" userLabel="4 Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="124"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htK-uF-F3N">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124"/>
+                                                        <color key="backgroundColor" red="0.66666203739999996" green="0.66666227580000004" blue="0.66666108369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="4"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="updateResLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WAp-w3-BZi"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7Z-wS-03X" userLabel="5 View">
+                                                <rect key="frame" x="72" y="0.0" width="67" height="124"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yod-SP-Oqb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124"/>
+                                                        <color key="backgroundColor" red="0.66666203739999996" green="0.66666227580000004" blue="0.66666108369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="updateResLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rwy-ot-HwM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDp-12-Ac2" userLabel="6 Stack View">
+                                                <rect key="frame" x="144" y="0.0" width="67" height="124"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6Q-cm-jfn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124"/>
+                                                        <color key="backgroundColor" red="0.66666203739999996" green="0.66666227580000004" blue="0.66666108369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="6"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="updateResLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rti-jj-iCf"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfD-2V-UAw" userLabel="+ Stack View">
+                                                <rect key="frame" x="216" y="0.0" width="67" height="124"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fh7-PK-SRi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124"/>
+                                                        <color key="backgroundColor" red="0.93492454290000004" green="0.52994638679999995" blue="0.199768424" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v64-JP-Jh6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cre-AY-UNf" userLabel="* View">
+                                                <rect key="frame" x="288" y="0.0" width="67" height="124"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCa-Mt-u9L">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124"/>
+                                                        <color key="backgroundColor" red="0.93492454290000004" green="0.52994638679999995" blue="0.199768424" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                        <state key="normal" title="*">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pz6-VX-bAo"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MlT-wQ-TDJ" userLabel="Third Line Stack View">
+                                        <rect key="frame" x="0.0" y="388" width="355" height="124.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbt-u0-XDv" userLabel="7 Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oM-2b-QGe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                        <color key="backgroundColor" red="0.66666203739999996" green="0.66666227580000004" blue="0.66666108369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="7"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="updateResLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ews-6b-QGs"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xv-S9-swX" userLabel="8 View">
+                                                <rect key="frame" x="72" y="0.0" width="67" height="124.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgW-Q1-b1l">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                        <color key="backgroundColor" red="0.66666203739999996" green="0.66666227580000004" blue="0.66666108369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="8"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="updateResLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8S5-Tc-hLG"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jO-VB-VPK" userLabel="9 Stack View">
+                                                <rect key="frame" x="144" y="0.0" width="67" height="124.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrT-DI-R1f">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                        <color key="backgroundColor" red="0.66666203739999996" green="0.66666227580000004" blue="0.66666108369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="9"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="updateResLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aab-6S-qiu"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1B-34-F02" userLabel="- Stack View">
+                                                <rect key="frame" x="216" y="0.0" width="67" height="124.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-cM-9Z0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                        <color key="backgroundColor" red="0.93492454290000004" green="0.52994638679999995" blue="0.199768424" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                        <state key="normal" title="-">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgf-PP-Fbx"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RG2-mb-UoB" userLabel="/ View">
+                                                <rect key="frame" x="288" y="0.0" width="67" height="124.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyn-bU-8ir">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="124.5"/>
+                                                        <color key="backgroundColor" red="0.93492454290000004" green="0.52994638679999995" blue="0.199768424" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                        <state key="normal" title="/">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsT-PE-9R1"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ug1-kc-jGV" userLabel="Fifth Row View">
+                                <rect key="frame" x="10" y="532.5" width="355" height="124.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvF-yJ-Oe0" userLabel="Left View">
+                                        <rect key="frame" x="0.0" y="0.0" width="213" height="124.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0i-x9-AY5">
+                                                <rect key="frame" x="73.5" y="5" width="66" height="114.5"/>
+                                                <color key="backgroundColor" red="0.66666203739999996" green="0.66666227580000004" blue="0.66666108369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="updateResLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ymm-wM-udq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.33333083990000001" green="0.33333098890000001" blue="0.3333303332" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="q0i-x9-AY5" firstAttribute="width" secondItem="FvF-yJ-Oe0" secondAttribute="width" multiplier="1:3" constant="-5" id="1bp-mu-el4"/>
+                                            <constraint firstItem="q0i-x9-AY5" firstAttribute="top" secondItem="FvF-yJ-Oe0" secondAttribute="top" constant="5" id="AfJ-na-elf"/>
+                                            <constraint firstItem="q0i-x9-AY5" firstAttribute="centerX" secondItem="FvF-yJ-Oe0" secondAttribute="centerX" id="WIl-ze-FYq"/>
+                                            <constraint firstAttribute="bottom" secondItem="q0i-x9-AY5" secondAttribute="bottom" constant="5" id="tOQ-6w-4to"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gz2-in-bmN" userLabel="Right View">
+                                        <rect key="frame" x="213" y="0.0" width="142" height="124.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3c-o5-VUo">
+                                                <rect key="frame" x="3" y="5" width="137" height="114.5"/>
+                                                <color key="backgroundColor" red="0.93492454290000004" green="0.52994638679999995" blue="0.199768424" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0xk-di-6md"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.33333083990000001" green="0.33333098890000001" blue="0.3333303332" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="S3c-o5-VUo" firstAttribute="top" secondItem="Gz2-in-bmN" secondAttribute="top" constant="5" id="76t-yP-KCn"/>
+                                            <constraint firstAttribute="bottom" secondItem="S3c-o5-VUo" secondAttribute="bottom" constant="5" id="Mv1-HN-Db1"/>
+                                            <constraint firstItem="S3c-o5-VUo" firstAttribute="leading" secondItem="Gz2-in-bmN" secondAttribute="leading" constant="2.5" id="Sh9-8g-LtH"/>
+                                            <constraint firstAttribute="trailing" secondItem="S3c-o5-VUo" secondAttribute="trailing" constant="2.5" id="h7q-Md-P5H"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.33333083990000001" green="0.33333098890000001" blue="0.3333303332" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="FvF-yJ-Oe0" firstAttribute="top" secondItem="ug1-kc-jGV" secondAttribute="top" id="1IJ-7W-3gy"/>
+                                    <constraint firstItem="Gz2-in-bmN" firstAttribute="width" secondItem="ug1-kc-jGV" secondAttribute="width" multiplier="2:5" id="8Q7-cz-tKO"/>
+                                    <constraint firstItem="Gz2-in-bmN" firstAttribute="height" secondItem="ug1-kc-jGV" secondAttribute="height" id="M2w-Lu-V3e"/>
+                                    <constraint firstItem="Gz2-in-bmN" firstAttribute="top" secondItem="ug1-kc-jGV" secondAttribute="top" id="WH6-aJ-UnK"/>
+                                    <constraint firstItem="FvF-yJ-Oe0" firstAttribute="leading" secondItem="ug1-kc-jGV" secondAttribute="leading" id="hIs-Fi-8k9"/>
+                                    <constraint firstItem="Gz2-in-bmN" firstAttribute="trailing" secondItem="ug1-kc-jGV" secondAttribute="trailing" id="l9h-zM-Tzs"/>
+                                    <constraint firstItem="FvF-yJ-Oe0" firstAttribute="height" secondItem="ug1-kc-jGV" secondAttribute="height" id="p2x-ps-rcg"/>
+                                    <constraint firstItem="FvF-yJ-Oe0" firstAttribute="width" secondItem="ug1-kc-jGV" secondAttribute="width" multiplier="3:5" id="q8t-cr-83U"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33333083987236023" green="0.33333098888397217" blue="0.33333033323287964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Pi7-DN-Hix" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-10" id="5vC-Zs-st0"/>
+                            <constraint firstItem="Pi7-DN-Hix" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BlX-do-Kii"/>
+                            <constraint firstItem="Pi7-DN-Hix" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Gzz-yA-GoY"/>
+                            <constraint firstItem="ug1-kc-jGV" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="-10" id="J2B-c6-vSl"/>
+                            <constraint firstItem="ug1-kc-jGV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="LAr-Pc-YyQ"/>
+                            <constraint firstItem="ug1-kc-jGV" firstAttribute="top" secondItem="Pi7-DN-Hix" secondAttribute="bottom" id="SaO-yr-VWF"/>
+                            <constraint firstItem="ug1-kc-jGV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-10" id="WhT-4s-Gnx"/>
+                            <constraint firstItem="ug1-kc-jGV" firstAttribute="height" secondItem="MlT-wQ-TDJ" secondAttribute="height" id="pyV-7i-7Dg"/>
+                            <constraint firstItem="Pi7-DN-Hix" firstAttribute="bottom" secondItem="ug1-kc-jGV" secondAttribute="top" id="ycc-2E-r26"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ACButton" destination="SV6-Ro-h57" id="0Ml-fu-9Rb"/>
+                        <outlet property="NEGButton" destination="2fg-oM-EmJ" id="t2Y-C8-E3Z"/>
+                        <outlet property="divideButton" destination="eyn-bU-8ir" id="7Hm-9G-hB8"/>
+                        <outlet property="eightButton" destination="AgW-Q1-b1l" id="yoS-90-1bp"/>
+                        <outlet property="equalsButton" destination="S3c-o5-VUo" id="RZ2-Dd-4o1"/>
+                        <outlet property="fiveButton" destination="yod-SP-Oqb" id="Q2Z-Gs-5WI"/>
+                        <outlet property="fourButton" destination="htK-uF-F3N" id="AwU-AH-Y9m"/>
+                        <outlet property="minusButton" destination="P0R-cM-9Z0" id="hKj-uD-zct"/>
+                        <outlet property="multButton" destination="MCa-Mt-u9L" id="4rI-DN-GGB"/>
+                        <outlet property="nineButton" destination="GrT-DI-R1f" id="iqF-KF-s12"/>
+                        <outlet property="oneButton" destination="XEP-ao-WbQ" id="s3p-2A-afT"/>
+                        <outlet property="plusButton" destination="fh7-PK-SRi" id="HXG-Wi-P8e"/>
+                        <outlet property="resultLabel" destination="6na-ZK-ktL" id="7KF-1A-7Zb"/>
+                        <outlet property="sevenButton" destination="7oM-2b-QGe" id="qW8-l9-7Ba"/>
+                        <outlet property="sixButton" destination="L6Q-cm-jfn" id="Jwd-kc-pGi"/>
+                        <outlet property="threeButton" destination="vkc-Ab-OMq" id="jdf-nQ-uOp"/>
+                        <outlet property="twoButon" destination="f0H-64-lix" id="i2N-lz-2g4"/>
+                        <outlet property="zeroButton" destination="q0i-x9-AY5" id="pEu-dT-pXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1106" y="-129"/>
+        </scene>
+    </scenes>
+</document>

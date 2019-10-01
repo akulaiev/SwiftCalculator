@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     var operand: Int = 0
     var result: Int = 0
     var newNum: Bool = true
+    var kostyl: Bool = false
     var operation: Operations!
     
     override func viewDidLoad() {
@@ -60,6 +61,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func updateResLabel(_ sender: UIButton) {
+        kostyl = true
         if resultLabel.text == "0" || resultLabel.text == "Error" || newNum {
             resultLabel.text = "\(sender.tag - 1)"
             newNum = false
@@ -97,6 +99,8 @@ class ViewController: UIViewController {
     
     func evaluateInput() {
         var error: Bool = false
+        kostyl = false
+//        print(operation!)
         var safeRes = (partialValue: 0, overflow: false)
         switch operation! {
         case .plus:
@@ -120,18 +124,18 @@ class ViewController: UIViewController {
     
     @IBAction func operationPressed(_ sender: UIButton) {
         newNum = true
-        if result == 0 {
-            operation = ViewController.Operations(rawValue: sender.tag)!
-            if let check = Int(resultLabel.text!) {
+        if let check = Int(resultLabel.text!) {
+            if result == 0 {
+                operation = ViewController.Operations(rawValue: sender.tag)!
                 result = check
             }
-        }
-        else {
-            if let check = Int(resultLabel.text!) {
-                operand = check
+            else {
+                if kostyl {
+                    operand = check
+                    evaluateInput()
+                }
+                operation = ViewController.Operations(rawValue: sender.tag)!
             }
-            evaluateInput()
-            operation = ViewController.Operations(rawValue: sender.tag)!
         }
     }
 

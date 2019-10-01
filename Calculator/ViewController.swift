@@ -33,8 +33,8 @@ class ViewController: UIViewController {
         case plus = 11, mult = 12, minus = 13, divide = 14
     }
     
-    var leftOp: Int = 0
-    var rightOp: Int = 0
+    var leftOp: Int!
+    var rightOp: Int!
     var operationNum: Int = 0
     var newNum: Bool = true
     
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func updateResLabel(_ sender: UIButton) {
-        if newNum == true {
+        if newNum == true || resultLabel.text == "0" {
             resultLabel.text = "\(sender.tag - 1)"
             newNum = false
         }
@@ -68,16 +68,17 @@ class ViewController: UIViewController {
             resultLabel.text! += "\(sender.tag - 1)"
         }
         if let check = Int(resultLabel.text!) {
-            if leftOp != 0 {
+            if !(leftOp == nil) {
                 rightOp = check
             }
         }
     }
    
     func resetParams() {
-        leftOp = 0
-        rightOp = 0
+        leftOp = nil
+        rightOp = nil
         newNum = true
+        operationNum = 0
     }
     
     @IBAction func ACPressed(_ sender: UIButton) {
@@ -101,39 +102,41 @@ class ViewController: UIViewController {
     }
     
     func evaluateInput() {
-        let operation: Operations = ViewController.Operations(rawValue: operationNum)!
-        var error: Bool = false
-        var safeRes = (partialValue: 0, overflow: false)
-        print("left: \(leftOp), right: \(rightOp)")
-        switch operation {
-        case .plus:
-            safeRes = leftOp.addingReportingOverflow(rightOp)
-        case .minus:
-            safeRes = leftOp.subtractingReportingOverflow(rightOp)
-        case .mult:
-            safeRes = leftOp.multipliedReportingOverflow(by: rightOp)
-        case .divide:
-            safeRes = leftOp.dividedReportingOverflow(by: rightOp)
-        }
-        error = safeRes.overflow
-        if !error {
-            print(safeRes.partialValue)
-            leftOp = safeRes.partialValue
-            resultLabel.text = "\(leftOp)"
-            rightOp = 0
-        }
-        else {
-            resultLabel.text = "Error"
+        if let operation: Operations = ViewController.Operations(rawValue: operationNum) {
+            if (leftOp != nil) && (rightOp != nil)
+            {
+                var error: Bool = false
+                var safeRes = (partialValue: 0, overflow: false)
+                switch operation {
+                case .plus:
+                    safeRes = leftOp!.addingReportingOverflow(rightOp!)
+                case .minus:
+                    safeRes = leftOp!.subtractingReportingOverflow(rightOp!)
+                case .mult:
+                    safeRes = leftOp!.multipliedReportingOverflow(by: rightOp!)
+                case .divide:
+                    safeRes = leftOp!.dividedReportingOverflow(by: rightOp!)
+                }
+                error = safeRes.overflow
+                if !error {
+                    leftOp = safeRes.partialValue
+                    resultLabel.text = "\(leftOp!)"
+                    rightOp = nil
+                }
+                else {
+                    resultLabel.text = "Error"
+                }
+            }
         }
     }
     
     @IBAction func operationPressed(_ sender: UIButton) {
         newNum = true
         if let check = Int(resultLabel.text!) {
-            if leftOp == 0 {
+            if !(leftOp != nil) {
                 leftOp = check
             }
-            if leftOp != 0 && rightOp != 0 && operationNum != 0 {
+            if (leftOp != nil) && (rightOp != nil) && operationNum != 0 {
                 evaluateInput()
             }
         }

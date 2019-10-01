@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     
     var operand: Int = 0
     var result: Int = 0
+    var newNum: Bool = true
     var operation: Operations!
     
     override func viewDidLoad() {
@@ -59,8 +60,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func updateResLabel(_ sender: UIButton) {
-        if resultLabel.text == "0" || resultLabel.text == "Error" || result != 0 {
+        if resultLabel.text == "0" || resultLabel.text == "Error" || newNum {
             resultLabel.text = "\(sender.tag - 1)"
+            newNum = false
         }
         else {
             resultLabel.text! += "\(sender.tag - 1)"
@@ -70,6 +72,8 @@ class ViewController: UIViewController {
     @IBAction func ACPressed(_ sender: UIButton) {
         resultLabel.text = "0"
         result = 0
+        operand = 0
+        newNum = true
     }
     
     @IBAction func negPressed(_ sender: UIButton) {
@@ -108,9 +112,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func operationPressed(_ sender: UIButton) {
+        newNum = true
         operation = ViewController.Operations(rawValue: sender.tag)!
-        if let check = Int(resultLabel.text!) {
-            result = check
+        if result == 0 {
+            if let check = Int(resultLabel.text!) {
+                result = check
+            }
+        }
+        else {
+            if let check = Int(resultLabel.text!) {
+                operand = check
+            }
+            evaluateInput()
         }
     }
 
@@ -122,5 +135,6 @@ class ViewController: UIViewController {
         evaluateInput()
         result = 0
         operand = 0
+        newNum = true
     }
 }

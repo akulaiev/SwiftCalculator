@@ -69,41 +69,48 @@ class ViewController: UIViewController {
         }
     }
    
-    @IBAction func ACPressed(_ sender: UIButton) {
-        resultLabel.text = "0"
+    func resetParams() {
         result = 0
         operand = 0
         newNum = true
     }
     
+    @IBAction func ACPressed(_ sender: UIButton) {
+        resultLabel.text = "0"
+        resetParams()
+    }
+    
     @IBAction func negPressed(_ sender: UIButton) {
-        var tmpRes: Int = 0
+        var safeRes = (partialValue: 0, overflow: false)
         if let res = resultLabel.text {
             if let check = Int(res) {
-                tmpRes = check * -1
-                resultLabel.text = "\(tmpRes)"
+                safeRes = check.multipliedReportingOverflow(by: -1)
+                if !safeRes.overflow {
+                    resultLabel.text = "\(safeRes.partialValue)"
+                }
+                else {
+                    resultLabel.text = "Error"
+                }
             }
         }
     }
     
     func evaluateInput() {
         var error: Bool = false
+        var safeRes = (partialValue: 0, overflow: false)
         switch operation! {
         case .plus:
-            result += operand
+            safeRes = result.addingReportingOverflow(operand)
         case .minus:
-            result -= operand
+            safeRes = result.subtractingReportingOverflow(operand)
         case .mult:
-            result *= operand
+            safeRes = result.multipliedReportingOverflow(by: operand)
         case .divide:
-            if (operand != 0) {
-                result /= operand
-            }
-            else {
-                error = true
-            }
+            safeRes = result.dividedReportingOverflow(by: operand)
         }
-        if error == false {
+        error = safeRes.overflow
+        if !error {
+            result = safeRes.partialValue
             resultLabel.text = "\(result)"
         }
         else {
@@ -133,8 +140,6 @@ class ViewController: UIViewController {
             operand = check
         }
         evaluateInput()
-        result = 0
-        operand = 0
-        newNum = true
+        resetParams()
     }
 }

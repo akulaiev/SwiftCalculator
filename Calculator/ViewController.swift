@@ -30,14 +30,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var equalsButton: UIButton!
     
     enum Operations: Int {
-        case plus = 11, mult = 12, minus = 13, divide = 14, equals = 15
+        case plus = 11, mult = 12, minus = 13, divide = 14
     }
     
-    var firstVal: Int = 0
-    var secondVal: Int = 0
+    var operand: Int = 0
     var result: Int = 0
     var operation: Operations!
-    var newNum: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,27 +59,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func updateResLabel(_ sender: UIButton) {
-        if newNum == true {
+        if resultLabel.text == "0" || resultLabel.text == "Error" || result != 0 {
             resultLabel.text = "\(sender.tag - 1)"
-            newNum = false
         }
         else {
-            if let check = Int(resultLabel.text!)
-            {
-                firstVal = check
-            }
             resultLabel.text! += "\(sender.tag - 1)"
-            if let check = Int(resultLabel.text!)
-            {
-                secondVal = check
-            }
         }
     }
    
     @IBAction func ACPressed(_ sender: UIButton) {
         resultLabel.text = "0"
-        firstVal = 0
-        newNum = true
+        result = 0
     }
     
     @IBAction func negPressed(_ sender: UIButton) {
@@ -94,39 +82,45 @@ class ViewController: UIViewController {
         }
     }
     
-    func resetData() {
-        
-    }
-    
     func evaluateInput() {
         var error: Bool = false
         switch operation! {
         case .plus:
-            result = firstVal + secondVal
+            result += operand
         case .minus:
-            result = firstVal - secondVal
+            result -= operand
         case .mult:
-            result = firstVal * secondVal
+            result *= operand
         case .divide:
-            if (secondVal != 0) {
-                result = firstVal / secondVal
+            if (operand != 0) {
+                result /= operand
             }
             else {
                 error = true
             }
-        case .equals:
-            newNum = true
         }
         if error == false {
             resultLabel.text = "\(result)"
         }
+        else {
+            resultLabel.text = "Error"
+        }
     }
     
     @IBAction func operationPressed(_ sender: UIButton) {
-        newNum = true
         operation = ViewController.Operations(rawValue: sender.tag)!
-        print("first: \(firstVal), second: \(secondVal)")
-        evaluateInput()
+        if let check = Int(resultLabel.text!) {
+            result = check
+        }
     }
 
+    @IBAction func equalPressed(sender: UIButton)
+    {
+        if let check = Int(resultLabel.text!) {
+            operand = check
+        }
+        evaluateInput()
+        result = 0
+        operand = 0
+    }
 }

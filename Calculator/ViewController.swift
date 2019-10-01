@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     var result: Int = 0
     var newNum: Bool = true
     var kostyl: Bool = false
-    var operation: Operations!
+    var operationNum: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,11 +98,12 @@ class ViewController: UIViewController {
     }
     
     func evaluateInput() {
+        let operation: Operations = ViewController.Operations(rawValue: operationNum)!
         var error: Bool = false
         kostyl = false
 //        print(operation!)
         var safeRes = (partialValue: 0, overflow: false)
-        switch operation! {
+        switch operation {
         case .plus:
             safeRes = result.addingReportingOverflow(operand)
         case .minus:
@@ -126,7 +127,7 @@ class ViewController: UIViewController {
         newNum = true
         if let check = Int(resultLabel.text!) {
             if result == 0 {
-                operation = ViewController.Operations(rawValue: sender.tag)!
+                operationNum = sender.tag
                 result = check
             }
             else {
@@ -134,7 +135,7 @@ class ViewController: UIViewController {
                     operand = check
                     evaluateInput()
                 }
-                operation = ViewController.Operations(rawValue: sender.tag)!
+                operationNum = sender.tag
             }
         }
     }

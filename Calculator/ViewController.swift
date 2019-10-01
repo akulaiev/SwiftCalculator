@@ -120,8 +120,8 @@ class ViewController: UIViewController {
     
     @IBAction func operationPressed(_ sender: UIButton) {
         newNum = true
-        operation = ViewController.Operations(rawValue: sender.tag)!
         if result == 0 {
+            operation = ViewController.Operations(rawValue: sender.tag)!
             if let check = Int(resultLabel.text!) {
                 result = check
             }
@@ -131,6 +131,7 @@ class ViewController: UIViewController {
                 operand = check
             }
             evaluateInput()
+            operation = ViewController.Operations(rawValue: sender.tag)!
         }
     }
 

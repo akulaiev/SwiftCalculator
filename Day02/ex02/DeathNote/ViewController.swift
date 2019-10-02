@@ -24,7 +24,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         self.rowHeight = noteTableView.bounds.height / CGFloat(victims.count) - 50
-        print(rowHeight)
         self.boundsView.backgroundColor = UIColor.black
     }
     

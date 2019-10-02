@@ -53,16 +53,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="uuY-vv-OdH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="637" height="44"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMx-AP-MlE">
-                                                    <rect key="frame" x="15" y="1" width="315" height="21"/>
+                                                    <rect key="frame" x="15" y="1" width="607" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKb-JV-hi3">
-                                                    <rect key="frame" x="15" y="23" width="315" height="21"/>
+                                                    <rect key="frame" x="15" y="23" width="607" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -130,12 +130,55 @@
                     <view key="view" contentMode="scaleToFill" id="1tz-UV-cc1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fPM-8B-WP4" userLabel="Full Stack View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6PT-eH-uyg" userLabel="Name TF Stack View">
+                                        <rect key="frame" x="102.5" y="0.0" width="170.5" height="201"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter victim's name" textAlignment="natural" minimumFontSize="17" background="paper" translatesAutoresizingMaskIntoConstraints="NO" id="vJ5-25-MuB">
+                                                <rect key="frame" x="0.0" y="89" width="170.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="177-9v-VoK" userLabel="Description TF Stack View">
+                                        <rect key="frame" x="108" y="201" width="159.5" height="201"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter the details" textAlignment="natural" minimumFontSize="17" background="paper" translatesAutoresizingMaskIntoConstraints="NO" id="AhP-Vn-4f1">
+                                                <rect key="frame" x="0.0" y="86.5" width="159.5" height="28"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYb-pd-kby" userLabel="DatePicker Stack View">
+                                        <rect key="frame" x="27.5" y="402" width="320" height="201"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fPM-8B-WP4" firstAttribute="top" secondItem="XEf-GL-A17" secondAttribute="top" id="7mR-lm-M64"/>
+                            <constraint firstItem="fPM-8B-WP4" firstAttribute="leading" secondItem="XEf-GL-A17" secondAttribute="leading" id="Ped-Xf-qyQ"/>
+                            <constraint firstItem="XEf-GL-A17" firstAttribute="trailing" secondItem="fPM-8B-WP4" secondAttribute="trailing" id="Yd5-zl-rDd"/>
+                            <constraint firstItem="XEf-GL-A17" firstAttribute="bottom" secondItem="fPM-8B-WP4" secondAttribute="bottom" id="rmh-Oy-rHn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XEf-GL-A17"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40Z-36-CJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" id="CKC-wR-cbg">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="Bo2-tb-jAc"/>
+                </stackView>
             </objects>
-            <point key="canvasLocation" x="878" y="48"/>
+            <point key="canvasLocation" x="877.60000000000002" y="47.226386806596707"/>
         </scene>
     </scenes>
     <resources>

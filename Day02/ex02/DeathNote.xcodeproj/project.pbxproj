@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DDF99C8234531B8008570CA /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDF99C7234531B8008570CA /* AddNoteViewController.swift */; };
 		2DEF9A5A2344904D00876E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF9A592344904D00876E28 /* AppDelegate.swift */; };
 		2DEF9A5C2344904D00876E28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF9A5B2344904D00876E28 /* ViewController.swift */; };
 		2DEF9A5F2344904D00876E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEF9A5D2344904D00876E28 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DDF99C7234531B8008570CA /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		2DEF9A562344904D00876E28 /* DeathNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeathNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEF9A592344904D00876E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DEF9A5B2344904D00876E28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				2DEF9A592344904D00876E28 /* AppDelegate.swift */,
+				2DDF99C7234531B8008570CA /* AddNoteViewController.swift */,
 				2DEF9A5B2344904D00876E28 /* ViewController.swift */,
 				2DEF9A5D2344904D00876E28 /* Main.storyboard */,
 				2DEF9A6B234495CC00876E28 /* Victim.swift */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDF99C8234531B8008570CA /* AddNoteViewController.swift in Sources */,
 				2DEF9A6C234495CC00876E28 /* Victim.swift in Sources */,
 				2DEF9A5C2344904D00876E28 /* ViewController.swift in Sources */,
 				2DEF9A5A2344904D00876E28 /* AppDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NotesViewController.swift
 //  DeathNote
 //
 //  Created by Anna KULAIEVA on 10/2/19.
@@ -11,29 +11,39 @@ import UIKit
 class NoteTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    @IBOutlet weak var dateLabel: UILabel!
 }
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var noteTableView: UITableView!
-    var victims: [Victim] = [Victim(name: "Kenny", description: "All the possible reasons"), Victim(name: "Joffrey Baratheon", description: "Poison"), Victim(name: "Sean Bean's characters", description: "I've no idea, they just die in every movie"), ]
     var rowHeight: CGFloat = 0
     var boundsView = UIView()
+    var appDelegate = AppDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.rowHeight = noteTableView.bounds.height / CGFloat(victims.count) - 50
+        appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.victims.append(Victim(name: "Kenny", description: "All the possible reasons", date: "23.10.2019, 11:11"))
+        appDelegate.victims.append(Victim(name: "Joffrey Baratheon", description: "Poison", date: "24.10.2019, 11:42"))
+        appDelegate.victims.append(Victim(name: "Sean Bean's characters", description: "I've no idea, they just die in every movie", date: "25.10.2019, 24:42"))
+        noteTableView.delegate = self
+        self.rowHeight = noteTableView.bounds.height / CGFloat(appDelegate.victims.count) - 50
         self.boundsView.backgroundColor = UIColor.black
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        noteTableView.reloadData()
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return victims.count
+        return appDelegate.victims.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,9 +72,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = noteTableView.dequeueReusableCell(withIdentifier: "noteCell") as! NoteTableViewCell
-        let victim = victims[(indexPath as NSIndexPath).section]
+        let victim = appDelegate.victims[(indexPath as NSIndexPath).section]
         cell.nameLabel.text = victim.name
         cell.descriptionLabel.text = victim.description
+        cell.dateLabel.text = victim.date
         return cell
     }
 }

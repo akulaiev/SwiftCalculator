@@ -16,7 +16,7 @@ class AddNoteViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     var newNote: Victim = Victim(name: "", description: "", date: "")
-    var victims = [Victim]()
+    var appDelegate = AppDelegate()
     var gotName: Bool = false
     var gotDescription: Bool = false
     var gotDate: Bool = false
@@ -26,8 +26,7 @@ class AddNoteViewController: UIViewController, UITextFieldDelegate {
         datePicker.minimumDate = Date()
         nameTextField.delegate = self
         detailsTextField.delegate = self
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        victims = appDelegate.victims
+        appDelegate = UIApplication.shared.delegate as! AppDelegate
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -64,15 +63,19 @@ class AddNoteViewController: UIViewController, UITextFieldDelegate {
         gotDate = true
         let date = datePicker.date
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM.dd.yyyy, hh:mm"
+        dateFormatter.dateFormat = "dd.mm.yyyy, hh:mm"
         newNote.date = dateFormatter.string(from: date)
     }
     
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
-        if gotName && gotDescription && gotDate {
-            victims.append(newNote)
-            print("name: \(victims.last!.name), description: \(victims.last!.description), date: \(victims.last!.date).")
+        if gotName && gotDate {
+            if !gotDescription {
+                newNote.description = ""
+            }
+            appDelegate.victims.append(newNote)
+            print("name: \(appDelegate.victims.last!.name), description: \(appDelegate.victims.last!.description), date: \(appDelegate.victims.last!.date).")
             print("name: \(newNote.name), description: \(newNote.description), date: \(newNote.date).")
         }
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }

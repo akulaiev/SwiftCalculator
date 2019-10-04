@@ -19,21 +19,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ufZ-WU-iHz">
+                        <rect key="frame" x="21.5" y="21.5" width="7" height="7"/>
+                    </activityIndicatorView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aHn-DR-ceq">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="aHn-DR-ceq" secondAttribute="trailing" id="6Zp-WT-TPp"/>
+                <constraint firstItem="ufZ-WU-iHz" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Iy5-Lh-dgL"/>
                 <constraint firstAttribute="bottom" secondItem="aHn-DR-ceq" secondAttribute="bottom" id="PN3-Ul-Uyd"/>
+                <constraint firstItem="ufZ-WU-iHz" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="TOR-gm-1AH"/>
                 <constraint firstItem="aHn-DR-ceq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="V0L-ly-jsE"/>
                 <constraint firstItem="aHn-DR-ceq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Yss-RX-4Ad"/>
+                <constraint firstItem="ufZ-WU-iHz" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="1:7" id="hLt-02-ddF"/>
+                <constraint firstItem="ufZ-WU-iHz" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="1:7" id="rge-iA-Olg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="pictureImageView" destination="aHn-DR-ceq" id="r9D-Jw-yMS"/>
+                <outlet property="progress" destination="ufZ-WU-iHz" id="RSL-uo-vqa"/>
             </connections>
+            <point key="canvasLocation" x="97" y="-31"/>
         </collectionViewCell>
     </objects>
 </document>

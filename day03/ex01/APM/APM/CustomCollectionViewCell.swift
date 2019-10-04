@@ -11,6 +11,7 @@ import UIKit
 class CustomCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var progress: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

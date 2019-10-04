@@ -12,6 +12,7 @@ extension UIImageView {
     public func asyncLoadImage (urlStr: String) {
         if let url = NSURL(string: urlStr) {
             let request = URLRequest(url: url as URL)
+            sleep(UInt32(0.5))
             URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
                 if error != nil {
                 DispatchQueue.main.async {
@@ -63,7 +64,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pictureCell", for: indexPath) as! CustomCollectionViewCell
+        cell.progress.hidesWhenStopped = true
+        cell.progress.startAnimating()
         cell.pictureImageView.asyncLoadImage(urlStr: urls[(indexPath as NSIndexPath).row])
+        cell.progress.stopAnimating()
         return cell
     }
 }

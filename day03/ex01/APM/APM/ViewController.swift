@@ -8,6 +8,30 @@
 
 import UIKit
 
+extension UIImageView {
+    public func asyncLoadImage (urlStr: String) {
+        if let url = NSURL(string: urlStr) {
+            let request = NSURLRequest(url: url as URL)
+            URLSession.sharedSession.dataTaskWithURL(with: request, completionHandler: { (data, response, error) -> Void in
+                if error == nil {
+                DispatchQueue.main.async {
+                    self.image = placeHolder
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                if let data = data {
+                    if let downloadedImage = UIImage(data: data) {
+                    imageCache.setObject(downloadedImage, forKey: NSString(string: URLString))
+                    self.image = downloadedImage
+                    }
+                }
+            }
+            }).resume()
+        }
+    }
+}
+
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var picturesCollectionView: UICollectionView!

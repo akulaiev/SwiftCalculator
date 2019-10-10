@@ -24,6 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let myBotToken: String = "79041156ad82db40296bb8fc4e5d15a3"
     let myWeatherToken: String = "d25940e235c3a07f181cb63eb3e119d8"
     var locationManager = CLLocationManager()
+    var resultStr: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,27 +39,44 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
-    func getWeather(response: Response) -> String {
-        var result: String = ""
+    func getWeather(response: Response) {
+        var requestTime: Date?
+        var requestLocation: CLLocationCoordinate2D?
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        
         if let location = response.get(entity: "location") {
             let latitude: Double = Double(truncating: location["lat"]! as! NSNumber)
             let longitude: Double = Double(truncating: location["lng"]! as! NSNumber)
+            requestLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         }
         else {
-            guard let location: CLLocationCoordinate2D = locationManager.location?.coordinate else { return result}
+            guard let location: CLLocationCoordinate2D = locationManager.location?.coordinate else { return }
+            requestLocation = location
         }
         if let dateTime = response.get(entity: "datetime") {
-            let timeStr: String = dateTime["iso"] as! String
+            let time = dateTime["iso"] as! String
+            requestTime = formatter.date(from: time)
         }
         else {
-            print("here")
-            let dateTime = Date()
-            let formatter = ISO8601DateFormatter()
-            formatter.formatOptions = [.withFullDate, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
-            print(formatter.string(from: dateTime))
+            requestTime = Date()
         }
-//        weatherClient?.getForecast(location: <#T##CLLocationCoordinate2D#>, time: <#T##Date#>, completion: <#T##(Result<(Forecast, RequestMetadata), Error>) -> Void#>)
-        return result
+        weatherClient!.getForecast(location: requestLocation!, time: requestTime!) { res in
+            switch res {
+            case .success(let forecast, _):
+                if let fTemp: Double = forecast.currently?.apparentTemperature {
+                    let cTemp = Int((fTemp - 32) * (5 / 9))
+                    self.resultStr = String(cTemp)
+                }
+            case .failure(let error):
+                self.resultStr = error.localizedDescription
+            }
+        }
+        if let res = resultStr {
+            formatter.dateFormat = "dd.MM.yyyy"
+            self.outputLabel.text! = "The temperature for " + formatter.string(from: requestTime!) + " is: " + res + "°C"
+            resultStr = nil
+        }
     }
     
     @IBAction func makeRequest(_ sender: UIButton) {
@@ -69,7 +87,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     if intents.count != 0 {
                         let indx: Int = Int.random(in: 0...4)
                         if intents[0].description.contains("weather") {
-                            self.outputLabel.text! = self.getWeather(response: response)
+                             self.getWeather(response: response)
                         }
                         else if intents[0].description == "greetings" {
                             self.outputLabel.text! = self.greet[indx]

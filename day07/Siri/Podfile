@@ -1,0 +1,5 @@
+platform :ios, '10.0'
+target 'Siri' do
+ pod 'RecastAI', '~> 3.5'
+ pod 'ForecastIO', '~> 8.0'	
+end

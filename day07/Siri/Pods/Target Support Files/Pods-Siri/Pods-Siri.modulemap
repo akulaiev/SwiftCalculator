@@ -1,0 +1,6 @@
+module Pods_Siri {
+  umbrella header "Pods-Siri-umbrella.h"
+
+  export *
+  module * { export * }
+}

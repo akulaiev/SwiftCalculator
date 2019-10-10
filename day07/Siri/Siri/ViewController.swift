@@ -15,6 +15,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var requestButton: UIButton!
     
     let greet: [String] = ["Hi!", "Hello!", "Nice to meet you!", "It's great to see you here!", "Aloha!"]
     let bye: [String] = ["Bye!", "See you soon!", "Already leaving?", "Come back soon!", "Ciao!"]
@@ -31,6 +32,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.bot = RecastAIClient(token : myBotToken, language: "en")
         self.weatherClient = DarkSkyClient(apiKey: myWeatherToken)
         self.weatherClient?.language = .english
+        self.requestButton.layer.cornerRadius = 15
+        self.outputLabel.layer.cornerRadius = 15
         self.locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
@@ -39,7 +42,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
-    func getWeather(response: Response) {
+    func getWeather(response: Response) -> String {
         var requestTime: Date?
         var requestLocation: CLLocationCoordinate2D?
         let formatter = DateFormatter()
@@ -51,7 +54,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             requestLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         }
         else {
-            guard let location: CLLocationCoordinate2D = locationManager.location?.coordinate else { return }
+            guard let location: CLLocationCoordinate2D = locationManager.location?.coordinate else { return "Error" }
             requestLocation = location
         }
         if let dateTime = response.get(entity: "datetime") {
@@ -72,11 +75,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 self.resultStr = error.localizedDescription
             }
         }
-        if let res = resultStr {
-            formatter.dateFormat = "dd.MM.yyyy"
-            self.outputLabel.text! = "The temperature for " + formatter.string(from: requestTime!) + " is: " + res + "°C"
-            resultStr = nil
-        }
+        formatter.dateFormat = "dd.MM.yyyy"
+        return formatter.string(from: requestTime!)
     }
     
     @IBAction func makeRequest(_ sender: UIButton) {
@@ -87,7 +87,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     if intents.count != 0 {
                         let indx: Int = Int.random(in: 0...4)
                         if intents[0].description.contains("weather") {
-                             self.getWeather(response: response)
+                            let date: String = self.getWeather(response: response)
+                            if let res = self.resultStr {
+                                self.outputLabel.textColor = .black
+                                self.outputLabel.textAlignment = .center
+                                self.outputLabel.text! = "The temperature for " + date + " is: " + res + "°C"
+                            }
                         }
                         else if intents[0].description == "greetings" {
                             self.outputLabel.text! = self.greet[indx]

@@ -1,0 +1,22 @@
+{
+  "name": "akulaiev2019",
+  "version": "0.1.0",
+  "summary": "A short description of akulaiev2019.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/DruidKuma/akulaiev2019",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "DruidKuma": "druidkuma@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/DruidKuma/akulaiev2019.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "akulaiev2019/Classes/**/*"
+}

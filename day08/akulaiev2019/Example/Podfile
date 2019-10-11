@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'akulaiev2019_Example' do
+  pod 'akulaiev2019', :path => '../'
+
+  target 'akulaiev2019_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

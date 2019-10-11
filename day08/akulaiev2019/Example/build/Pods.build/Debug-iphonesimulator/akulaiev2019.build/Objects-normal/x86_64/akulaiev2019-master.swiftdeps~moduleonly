@@ -1,6 +1,0 @@
-version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
-options: "3be0dc08a17cb77b3b6d41ee0f35dc5a"
-build_time: [1570814486, 340852000]
-inputs:
-  "/Users/akulaiev/Desktop/akulaiev/day08/akulaiev2019/akulaiev2019/Classes/Article.swift": [1570813116, 0]
-  "/Users/akulaiev/Desktop/akulaiev/day08/akulaiev2019/akulaiev2019/Classes/ArticleManager.swift": [1570813050, 0]

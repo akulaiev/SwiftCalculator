@@ -1,0 +1,4 @@
+platform :ios, '8.0'
+target 'PersonnalDiary' do
+ pod 'akulaiev2019', :path => '/Users/DruidKuma/Desktop/akulaiev2019'	
+end

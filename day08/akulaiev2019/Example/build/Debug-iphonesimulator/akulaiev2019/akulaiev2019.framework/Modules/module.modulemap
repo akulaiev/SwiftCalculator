@@ -1,0 +1,11 @@
+framework module akulaiev2019 {
+  umbrella header "akulaiev2019-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module akulaiev2019.Swift {
+    header "akulaiev2019-Swift.h"
+    requires objc
+}

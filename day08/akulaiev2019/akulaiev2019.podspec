@@ -12,10 +12,8 @@ Pod::Spec.new do |s|
   s.summary          = 'akulaiev2019 - for learning purposes'
   s.framework        = 'CoreData'
   s.description      = 'CocoaPod created for learning purposes. Uses CoreData Framework.'
-  s.homepage         = 'https://github.com/akulaiev'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'akulaiev' => 'akulaiev@student.unit.ua' }
-  s.source           = { :git => 'https://github.com/akulaiev/SwiftPool.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.swift_version = '5.0'
   s.source_files = 'akulaiev2019/Classes/**/*'

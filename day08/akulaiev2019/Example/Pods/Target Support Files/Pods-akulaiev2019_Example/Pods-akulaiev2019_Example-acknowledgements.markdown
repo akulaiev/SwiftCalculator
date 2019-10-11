@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## akulaiev2019
 
-Copyright (c) 2019 DruidKuma <druidkuma@gmail.com>
+Copyright (c) 2019 akulaiev <akulaiev@student.unit.ua>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

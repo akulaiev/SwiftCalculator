@@ -2,14 +2,14 @@
 //  Article.swift
 //  akulaiev2019
 //
-//  Created by Anna Kulaieva on 10/11/19.
+//  Created by Anna KULAIEVA on 10/11/19.
 //
 
-import Foundation
 import CoreData
 
-class Article: NSManagedObject {
-    
+@objc(Article)
+public class Article: NSManagedObject {
+
     @NSManaged public var title: String?
     @NSManaged public var content: String?
     @NSManaged public var language: String?
@@ -18,6 +18,6 @@ class Article: NSManagedObject {
     @NSManaged public var modificationDate: NSDate?
     
     override public var description: String {
-        return "title: " + title + "\n" + "content: " + content + "\n" + "language: " + language + "\n" + "created at: " + creationDate + "modified at: " + modificationDate
+        return "Title:  \(title!)\nContent: \(content!)\nLanguage: \(language!)\nCreated at: \(creationDate!)\nModified at: \(modificationDate!)"
     }
 }

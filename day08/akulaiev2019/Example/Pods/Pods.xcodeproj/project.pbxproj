@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0BA017D0B690666B8812359B08133C68 /* akulaiev2019-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A2C728C71F8315B0A881BED35A3D89 /* akulaiev2019-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34801CCD235000A2002FB275 /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34801CCC235000A2002FB275 /* ArticleManager.swift */; };
-		34801CCF235000B5002FB275 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34801CCE235000B5002FB275 /* Article.swift */; };
+		2D06F9422350EBF900A83F29 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D06F9412350EBF800A83F29 /* Article.swift */; };
+		2DABD0B12350E060003D9BD7 /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DABD0B02350E060003D9BD7 /* ArticleManager.swift */; };
+		2DABD0BA2350E06D003D9BD7 /* article.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DABD0B82350E06D003D9BD7 /* article.xcdatamodeld */; };
+		2DABD0BB2350E06D003D9BD7 /* article.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DABD0B82350E06D003D9BD7 /* article.xcdatamodeld */; };
+		2DABD0BC2350E06D003D9BD7 /* article.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DABD0B82350E06D003D9BD7 /* article.xcdatamodeld */; };
 		4B092EB5BB98474A74A7B9A1F7A3F133 /* Pods-akulaiev2019_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C01611A8F41881F4D425101B31384B /* Pods-akulaiev2019_Tests-dummy.m */; };
 		4C896F90ACEC3D2C3AEEF00334CF9902 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		74924AA6280596CBF984C89FF109A46F /* Pods-akulaiev2019_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC7A6A3DDDAB6034336B9EC77E4339E4 /* Pods-akulaiev2019_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,11 +45,11 @@
 		16A64C63DEAB2410502E49CECC78EF7E /* Pods-akulaiev2019_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-akulaiev2019_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		26EC3ADAED2FC3E6BFE55523D062E635 /* akulaiev2019-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "akulaiev2019-Info.plist"; sourceTree = "<group>"; };
 		2AEAC649B4A3BB0C70362AE07C4156FC /* akulaiev2019-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "akulaiev2019-dummy.m"; sourceTree = "<group>"; };
+		2D06F9412350EBF800A83F29 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Article.swift; path = akulaiev2019/Classes/Article.swift; sourceTree = "<group>"; };
+		2DABD0B02350E060003D9BD7 /* ArticleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleManager.swift; path = akulaiev2019/Classes/ArticleManager.swift; sourceTree = "<group>"; };
+		2DABD0B92350E06D003D9BD7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		34494EE39F10E7ACAB72F61E372906A9 /* akulaiev2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = akulaiev2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		34801CC6234FF9FE002FB275 /* article.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = article.xcdatamodel; sourceTree = "<group>"; };
-		34801CCC235000A2002FB275 /* ArticleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleManager.swift; path = akulaiev2019/Classes/ArticleManager.swift; sourceTree = "<group>"; };
-		34801CCE235000B5002FB275 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Article.swift; path = akulaiev2019/Classes/Article.swift; sourceTree = "<group>"; };
 		3C364F4B24BFC77FBC5AB188752CF2BC /* Pods-akulaiev2019_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-akulaiev2019_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4003B41BDDAD264672031E7D2905B8A2 /* Pods-akulaiev2019_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-akulaiev2019_Example-Info.plist"; sourceTree = "<group>"; };
 		4D2796E6A396E76E7ECF377E71CA413F /* Pods-akulaiev2019_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-akulaiev2019_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -216,9 +219,9 @@
 		E2DA2D2CEB629B1BC4F66DA2440355EA /* akulaiev2019 */ = {
 			isa = PBXGroup;
 			children = (
-				34801CC7234FF9FE002FB275 /* article.xcdatamodeld */,
-				34801CCE235000B5002FB275 /* Article.swift */,
-				34801CCC235000A2002FB275 /* ArticleManager.swift */,
+				2DABD0B02350E060003D9BD7 /* ArticleManager.swift */,
+				2D06F9412350EBF800A83F29 /* Article.swift */,
+				2DABD0B82350E06D003D9BD7 /* article.xcdatamodeld */,
 				07A280D3FEC3D14A0942989430299468 /* Pod */,
 				0232236EC56ECB1C561F864977AC92F0 /* Support Files */,
 			);
@@ -321,7 +324,13 @@
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				TargetAttributes = {
+					A7355C92307FE5F81FB3F7764372F53F = {
+						LastSwiftMigration = 1020;
+					};
 					F9BD7DF661057C8D4BD5C68B74F106C7 = {
+						LastSwiftMigration = 1020;
+					};
+					FE4A5A1BB6E28FE468948DA7D1B84DD0 = {
 						LastSwiftMigration = 1020;
 					};
 				};
@@ -332,7 +341,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 4A2E313D105AA402B0A172DDE68D91B9 /* Products */;
@@ -375,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DABD0BC2350E06D003D9BD7 /* article.xcdatamodeld in Sources */,
 				4B092EB5BB98474A74A7B9A1F7A3F133 /* Pods-akulaiev2019_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,9 +392,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D06F9422350EBF900A83F29 /* Article.swift in Sources */,
+				2DABD0BA2350E06D003D9BD7 /* article.xcdatamodeld in Sources */,
+				2DABD0B12350E060003D9BD7 /* ArticleManager.swift in Sources */,
 				CEEB6A6BA27B1FB4E67666BFD69F3000 /* akulaiev2019-dummy.m in Sources */,
-				34801CCD235000A2002FB275 /* ArticleManager.swift in Sources */,
-				34801CCF235000B5002FB275 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DABD0BB2350E06D003D9BD7 /* article.xcdatamodeld in Sources */,
 				9D35595060A00AF95627EF57DA2547BC /* Pods-akulaiev2019_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +431,7 @@
 			baseConfigurationReference = ED4D8127010604A2177764325A1BFA26 /* Pods-akulaiev2019_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -442,6 +454,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -453,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DFDD46CB17267FE2FBA11D28E47EC889 /* akulaiev2019.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -473,7 +487,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -485,6 +500,7 @@
 			baseConfigurationReference = 6DEEF2B64BAC93F67B752CE81B5816CF /* Pods-akulaiev2019_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -507,6 +523,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -518,6 +536,7 @@
 			baseConfigurationReference = 3C364F4B24BFC77FBC5AB188752CF2BC /* Pods-akulaiev2019_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -540,6 +559,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -552,6 +572,7 @@
 			baseConfigurationReference = 9B5FA013ED08A35FF8CD0E5457B13EFB /* Pods-akulaiev2019_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -574,6 +595,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -707,6 +730,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DFDD46CB17267FE2FBA11D28E47EC889 /* akulaiev2019.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -727,7 +751,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -777,15 +801,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		34801CC7234FF9FE002FB275 /* article.xcdatamodeld */ = {
+		2DABD0B82350E06D003D9BD7 /* article.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				34801CC6234FF9FE002FB275 /* article.xcdatamodel */,
+				2DABD0B92350E06D003D9BD7 /* Model.xcdatamodel */,
 			);
-			currentVersion = 34801CC6234FF9FE002FB275 /* article.xcdatamodel */;
+			currentVersion = 2DABD0B92350E06D003D9BD7 /* Model.xcdatamodel */;
 			name = article.xcdatamodeld;
-			path = Example/../article.xcdatamodeld;
+			path = akulaiev2019/Assets/article.xcdatamodeld;
 			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};

@@ -1,6 +1,6 @@
 # akulaiev2019
 
-[![CI Status](https://img.shields.io/travis/DruidKuma/akulaiev2019.svg?style=flat)](https://travis-ci.org/DruidKuma/akulaiev2019)
+[![CI Status](https://img.shields.io/travis/akulaiev/akulaiev2019.svg?style=flat)](https://travis-ci.org/akulaiev/akulaiev2019)
 [![Version](https://img.shields.io/cocoapods/v/akulaiev2019.svg?style=flat)](https://cocoapods.org/pods/akulaiev2019)
 [![License](https://img.shields.io/cocoapods/l/akulaiev2019.svg?style=flat)](https://cocoapods.org/pods/akulaiev2019)
 [![Platform](https://img.shields.io/cocoapods/p/akulaiev2019.svg?style=flat)](https://cocoapods.org/pods/akulaiev2019)
@@ -22,7 +22,7 @@ pod 'akulaiev2019'
 
 ## Author
 
-DruidKuma, druidkuma@gmail.com
+akulaiev, akulaiev@student.unit.ua
 
 ## License
 

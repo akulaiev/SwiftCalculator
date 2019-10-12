@@ -13,22 +13,15 @@ class ViewController: UIViewController {
 
     let localAuthenticationContext = LAContext()
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "toArticlesDisplay") {
-            let articlesDisplayVC = segue.destination as! ArticleTableViewController
-        }
-    }
-    
     func authentificate() {
         var error: NSError?
         let loginStr = "You have to authenticate to use this Diary"
         if localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
             localAuthenticationContext.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: loginStr) { success, error in
                 if success {
+                    print("ok!")
                     DispatchQueue.main.async {
-                        print("ok!")
                         self.performSegue(withIdentifier: "toArticlesDisplay", sender: self)
-                        return
                     }
                 }
                 else {

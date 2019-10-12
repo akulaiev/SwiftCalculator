@@ -12,6 +12,10 @@
 		34801CE22351198E002FB275 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34801CE02351198E002FB275 /* Main.storyboard */; };
 		34801CE42351198E002FB275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34801CE32351198E002FB275 /* Assets.xcassets */; };
 		34801CE72351198E002FB275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34801CE52351198E002FB275 /* LaunchScreen.storyboard */; };
+		34801CEF235136C1002FB275 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34801CEE235136C1002FB275 /* LocalAuthentication.framework */; };
+		34801CF123515C11002FB275 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34801CF023515C11002FB275 /* MyTableViewCell.swift */; };
+		34801CF323515D17002FB275 /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34801CF223515D17002FB275 /* ArticleTableViewController.swift */; };
+		B371A073B3AD39F617186F78 /* libPods-PersonnalDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9413DC25E913BE1A44052B0D /* libPods-PersonnalDiary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		34801CE32351198E002FB275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34801CE62351198E002FB275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34801CE82351198E002FB275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34801CEE235136C1002FB275 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		34801CF023515C11002FB275 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		34801CF223515D17002FB275 /* ArticleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
+		84CEC8380DFC16A40D0A5764 /* Pods-PersonnalDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonnalDiary.debug.xcconfig"; path = "Target Support Files/Pods-PersonnalDiary/Pods-PersonnalDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		9413DC25E913BE1A44052B0D /* libPods-PersonnalDiary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PersonnalDiary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F88530ACB3A318850E4701BD /* Pods-PersonnalDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonnalDiary.release.xcconfig"; path = "Target Support Files/Pods-PersonnalDiary/Pods-PersonnalDiary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34801CEF235136C1002FB275 /* LocalAuthentication.framework in Frameworks */,
+				B371A073B3AD39F617186F78 /* libPods-PersonnalDiary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1D6C500A1222FC5AB4E27F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84CEC8380DFC16A40D0A5764 /* Pods-PersonnalDiary.debug.xcconfig */,
+				F88530ACB3A318850E4701BD /* Pods-PersonnalDiary.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		34801CD02351198E002FB275 = {
 			isa = PBXGroup;
 			children = (
 				34801CDB2351198E002FB275 /* PersonnalDiary */,
 				34801CDA2351198E002FB275 /* Products */,
+				2A1D6C500A1222FC5AB4E27F /* Pods */,
+				35D1C33C2B7592DA651EC654 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +80,22 @@
 				34801CDC2351198E002FB275 /* AppDelegate.swift */,
 				34801CDE2351198E002FB275 /* ViewController.swift */,
 				34801CE02351198E002FB275 /* Main.storyboard */,
+				34801CF223515D17002FB275 /* ArticleTableViewController.swift */,
+				34801CF023515C11002FB275 /* MyTableViewCell.swift */,
 				34801CE32351198E002FB275 /* Assets.xcassets */,
 				34801CE52351198E002FB275 /* LaunchScreen.storyboard */,
 				34801CE82351198E002FB275 /* Info.plist */,
 			);
 			path = PersonnalDiary;
+			sourceTree = "<group>";
+		};
+		35D1C33C2B7592DA651EC654 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34801CEE235136C1002FB275 /* LocalAuthentication.framework */,
+				9413DC25E913BE1A44052B0D /* libPods-PersonnalDiary.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +105,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34801CEB2351198E002FB275 /* Build configuration list for PBXNativeTarget "PersonnalDiary" */;
 			buildPhases = (
+				E7B9AC079A9FB18F8DF2B65F /* [CP] Check Pods Manifest.lock */,
 				34801CD52351198E002FB275 /* Sources */,
 				34801CD62351198E002FB275 /* Frameworks */,
 				34801CD72351198E002FB275 /* Resources */,
@@ -130,13 +165,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E7B9AC079A9FB18F8DF2B65F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PersonnalDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		34801CD52351198E002FB275 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34801CF323515D17002FB275 /* ArticleTableViewController.swift in Sources */,
 				34801CDF2351198E002FB275 /* ViewController.swift in Sources */,
 				34801CDD2351198E002FB275 /* AppDelegate.swift in Sources */,
+				34801CF123515C11002FB275 /* MyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,10 +342,11 @@
 		};
 		34801CEC2351198E002FB275 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84CEC8380DFC16A40D0A5764 /* Pods-PersonnalDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Personnal Diary/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PersonnalDiary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,10 +360,11 @@
 		};
 		34801CED2351198E002FB275 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F88530ACB3A318850E4701BD /* Pods-PersonnalDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Personnal Diary/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PersonnalDiary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

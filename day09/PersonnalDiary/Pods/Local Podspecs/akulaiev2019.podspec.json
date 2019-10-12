@@ -1,0 +1,25 @@
+{
+  "name": "akulaiev2019",
+  "homepage": "https://github.com/akulaiev",
+  "version": "0.1.0",
+  "summary": "akulaiev2019 - for learning purposes",
+  "frameworks": "CoreData",
+  "description": "CocoaPod created for learning purposes. Uses CoreData Framework.",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "akulaiev": "akulaiev@student.unit.ua"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "swift_versions": "5.0",
+  "source": {
+    "git": "https://github.com/akulaiev/akulaiev2019.git",
+    "tag": "0.1.0"
+  },
+  "source_files": "akulaiev2019/Classes/**/*",
+  "swift_version": "5.0"
+}

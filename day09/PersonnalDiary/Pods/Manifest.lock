@@ -1,0 +1,16 @@
+PODS:
+  - akulaiev2019 (0.1.0)
+
+DEPENDENCIES:
+  - akulaiev2019 (from `/Users/DruidKuma/Desktop/akulaiev2019`)
+
+EXTERNAL SOURCES:
+  akulaiev2019:
+    :path: "/Users/DruidKuma/Desktop/akulaiev2019"
+
+SPEC CHECKSUMS:
+  akulaiev2019: 763d8b4ea214fe8c882a808bdc4df3dc5bceb3bc
+
+PODFILE CHECKSUM: c0e0b5835f9af5efed66495a8f717e9b6e83fe4c
+
+COCOAPODS: 1.7.5

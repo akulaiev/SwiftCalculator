@@ -1,0 +1,6 @@
+module Pods_PersonnalDiary {
+  umbrella header "Pods-PersonnalDiary-umbrella.h"
+
+  export *
+  module * { export * }
+}

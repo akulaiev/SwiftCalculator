@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3177E4ADCB8D2C8737ADA127B0AF9424 /* Pods-PersonnalDiary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8243078255F2706B96CCF886D5E04B84 /* Pods-PersonnalDiary-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3D3273D0B077445EF1588221412B9F34 /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EB1D8A48B6419FC51A57F2DF10392 /* ArticleManager.swift */; };
+		A0F16E0E481CAB5348EE16A05EE38EA0 /* akulaiev2019-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D20209E294F5A716FDEEF45C539E476 /* akulaiev2019-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA9C0401647CA762DC34B9564A35E8A8 /* akulaiev2019-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B020B43C0B57BD9A82F46C7DFE20A406 /* akulaiev2019-dummy.m */; };
+		B3DB20F11C94984B762C3F9083F86330 /* Pods-PersonnalDiary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AB0DD0582CBB179484B8DC0957443F /* Pods-PersonnalDiary-dummy.m */; };
+		EB662836470F69819083AAD5941DF643 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FD919F5F2A9A50B7C185AC5144669 /* Article.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07FBD21461AA54346AC5D262D76F7422 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9BD7DF661057C8D4BD5C68B74F106C7;
+			remoteInfo = akulaiev2019;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0304635481F68F6006CF31EA2BF31948 /* libPods-PersonnalDiary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PersonnalDiary.a"; path = "libPods-PersonnalDiary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09DEED7A3487581B10F768B09F07421A /* Pods-PersonnalDiary-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PersonnalDiary-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0E26A7B71839BEAB2883A212C0179371 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		27403D76C069EABCC541496E044F61E2 /* Pods-PersonnalDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PersonnalDiary.release.xcconfig"; sourceTree = "<group>"; };
+		2EAB3F46EC8DBDF03DA58317094E6317 /* Pods-PersonnalDiary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PersonnalDiary.modulemap"; sourceTree = "<group>"; };
+		34494EE39F10E7ACAB72F61E372906A9 /* libakulaiev2019.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libakulaiev2019.a; path = libakulaiev2019.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		73770717DFE6501D0FB5A6D986DDCEFB /* akulaiev2019-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "akulaiev2019-prefix.pch"; sourceTree = "<group>"; };
+		768A3BF1C24C6E45207964F5D36B1321 /* Pods-PersonnalDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PersonnalDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		797EB1D8A48B6419FC51A57F2DF10392 /* ArticleManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArticleManager.swift; path = akulaiev2019/Classes/ArticleManager.swift; sourceTree = "<group>"; };
+		8243078255F2706B96CCF886D5E04B84 /* Pods-PersonnalDiary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PersonnalDiary-umbrella.h"; sourceTree = "<group>"; };
+		8D20209E294F5A716FDEEF45C539E476 /* akulaiev2019-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "akulaiev2019-umbrella.h"; sourceTree = "<group>"; };
+		9C0D67F4EB0C85414BE7A7B393682E65 /* Pods-PersonnalDiary-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PersonnalDiary-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A207019BB69C89B9394ADF823CD0D56E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A819E3BFEB26566327FA655EC912934A /* akulaiev2019.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = akulaiev2019.modulemap; sourceTree = "<group>"; };
+		B020B43C0B57BD9A82F46C7DFE20A406 /* akulaiev2019-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "akulaiev2019-dummy.m"; sourceTree = "<group>"; };
+		B59FD919F5F2A9A50B7C185AC5144669 /* Article.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Article.swift; path = akulaiev2019/Classes/Article.swift; sourceTree = "<group>"; };
+		B8912B6F5C005A6D7BFE3F3D2F0D1327 /* akulaiev2019.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = akulaiev2019.xcconfig; sourceTree = "<group>"; };
+		D7AB0DD0582CBB179484B8DC0957443F /* Pods-PersonnalDiary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PersonnalDiary-dummy.m"; sourceTree = "<group>"; };
+		F14E02B97DA8543D12EAA5CEBF4CAE97 /* akulaiev2019.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = akulaiev2019.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		749A75637C9E442E0A49877C4ED374EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819820168EB41F87BE84D3A010FAC9BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		113674731D027449CBBE03C2EEDA4A6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34494EE39F10E7ACAB72F61E372906A9 /* libakulaiev2019.a */,
+				0304635481F68F6006CF31EA2BF31948 /* libPods-PersonnalDiary.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27F09F742A02C1B9B1CDA5CF4D8328AC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A819E3BFEB26566327FA655EC912934A /* akulaiev2019.modulemap */,
+				B8912B6F5C005A6D7BFE3F3D2F0D1327 /* akulaiev2019.xcconfig */,
+				B020B43C0B57BD9A82F46C7DFE20A406 /* akulaiev2019-dummy.m */,
+				73770717DFE6501D0FB5A6D986DDCEFB /* akulaiev2019-prefix.pch */,
+				8D20209E294F5A716FDEEF45C539E476 /* akulaiev2019-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../SwiftPool/day09/PersonnalDiary/Pods/Target Support Files/akulaiev2019";
+			sourceTree = "<group>";
+		};
+		3D6F155AFD7D9ACA888158FECA5B00E5 /* akulaiev2019 */ = {
+			isa = PBXGroup;
+			children = (
+				B59FD919F5F2A9A50B7C185AC5144669 /* Article.swift */,
+				797EB1D8A48B6419FC51A57F2DF10392 /* ArticleManager.swift */,
+				C4A2AC895C22AD6C5B3623617DCCBF24 /* Pod */,
+				27F09F742A02C1B9B1CDA5CF4D8328AC /* Support Files */,
+			);
+			name = akulaiev2019;
+			path = /Users/DruidKuma/Desktop/akulaiev2019;
+			sourceTree = "<absolute>";
+		};
+		7F4FD4AD4E8F7C4594D0760D6313F408 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D6F155AFD7D9ACA888158FECA5B00E5 /* akulaiev2019 */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		871DA96F20E9C2FFFB16548C39024028 /* Pods-PersonnalDiary */ = {
+			isa = PBXGroup;
+			children = (
+				2EAB3F46EC8DBDF03DA58317094E6317 /* Pods-PersonnalDiary.modulemap */,
+				09DEED7A3487581B10F768B09F07421A /* Pods-PersonnalDiary-acknowledgements.markdown */,
+				9C0D67F4EB0C85414BE7A7B393682E65 /* Pods-PersonnalDiary-acknowledgements.plist */,
+				D7AB0DD0582CBB179484B8DC0957443F /* Pods-PersonnalDiary-dummy.m */,
+				8243078255F2706B96CCF886D5E04B84 /* Pods-PersonnalDiary-umbrella.h */,
+				768A3BF1C24C6E45207964F5D36B1321 /* Pods-PersonnalDiary.debug.xcconfig */,
+				27403D76C069EABCC541496E044F61E2 /* Pods-PersonnalDiary.release.xcconfig */,
+			);
+			name = "Pods-PersonnalDiary";
+			path = "Target Support Files/Pods-PersonnalDiary";
+			sourceTree = "<group>";
+		};
+		A2BB420C8F581CAD1C1D566D1E600AAD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				871DA96F20E9C2FFFB16548C39024028 /* Pods-PersonnalDiary */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C4A2AC895C22AD6C5B3623617DCCBF24 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F14E02B97DA8543D12EAA5CEBF4CAE97 /* akulaiev2019.podspec */,
+				A207019BB69C89B9394ADF823CD0D56E /* LICENSE */,
+				0E26A7B71839BEAB2883A212C0179371 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				7F4FD4AD4E8F7C4594D0760D6313F408 /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				113674731D027449CBBE03C2EEDA4A6D /* Products */,
+				A2BB420C8F581CAD1C1D566D1E600AAD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2EDF77FED69B71E12AF947351113CE08 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F16E0E481CAB5348EE16A05EE38EA0 /* akulaiev2019-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70D892A3466EC3E3D927E9736D01EC56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3177E4ADCB8D2C8737ADA127B0AF9424 /* Pods-PersonnalDiary-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		921AA6DBB2E11FB56148D71B1B4D50E6 /* Pods-PersonnalDiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6677FFC7BC42BC5C5099B1C89EFA17D6 /* Build configuration list for PBXNativeTarget "Pods-PersonnalDiary" */;
+			buildPhases = (
+				70D892A3466EC3E3D927E9736D01EC56 /* Headers */,
+				829DD6288648F9C6D0C893425C5F7BC1 /* Sources */,
+				749A75637C9E442E0A49877C4ED374EB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DA88EBEA39F663F80FC7E93FFB9F84B /* PBXTargetDependency */,
+			);
+			name = "Pods-PersonnalDiary";
+			productName = "Pods-PersonnalDiary";
+			productReference = 0304635481F68F6006CF31EA2BF31948 /* libPods-PersonnalDiary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F9BD7DF661057C8D4BD5C68B74F106C7 /* akulaiev2019 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5583CE810F9E38FC3E906D87C4688CDC /* Build configuration list for PBXNativeTarget "akulaiev2019" */;
+			buildPhases = (
+				2EDF77FED69B71E12AF947351113CE08 /* Headers */,
+				3199D306A9819C9AC7390C0F1ED483BB /* Sources */,
+				819820168EB41F87BE84D3A010FAC9BE /* Frameworks */,
+				4C2B49E2B1A395A275EF0A66CD22A713 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = akulaiev2019;
+			productName = akulaiev2019;
+			productReference = 34494EE39F10E7ACAB72F61E372906A9 /* libakulaiev2019.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 113674731D027449CBBE03C2EEDA4A6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9BD7DF661057C8D4BD5C68B74F106C7 /* akulaiev2019 */,
+				921AA6DBB2E11FB56148D71B1B4D50E6 /* Pods-PersonnalDiary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C2B49E2B1A395A275EF0A66CD22A713 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/akulaiev2019/akulaiev2019.modulemap",
+				"${PODS_ROOT}/Headers/Public/akulaiev2019/akulaiev2019-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/akulaiev2019-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/akulaiev2019/akulaiev2019.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/akulaiev2019/akulaiev2019-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3199D306A9819C9AC7390C0F1ED483BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9C0401647CA762DC34B9564A35E8A8 /* akulaiev2019-dummy.m in Sources */,
+				EB662836470F69819083AAD5941DF643 /* Article.swift in Sources */,
+				3D3273D0B077445EF1588221412B9F34 /* ArticleManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		829DD6288648F9C6D0C893425C5F7BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3DB20F11C94984B762C3F9083F86330 /* Pods-PersonnalDiary-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DA88EBEA39F663F80FC7E93FFB9F84B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = akulaiev2019;
+			target = F9BD7DF661057C8D4BD5C68B74F106C7 /* akulaiev2019 */;
+			targetProxy = 07FBD21461AA54346AC5D262D76F7422 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		452A12B95D928A5383889CFC7A79CD2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8912B6F5C005A6D7BFE3F3D2F0D1327 /* akulaiev2019.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/akulaiev2019/akulaiev2019-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/akulaiev2019/akulaiev2019.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = akulaiev2019;
+				PRODUCT_NAME = akulaiev2019;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9082291BA286FDD29F00471596727907 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768A3BF1C24C6E45207964F5D36B1321 /* Pods-PersonnalDiary.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PersonnalDiary/Pods-PersonnalDiary.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0F823B220019E9E1DAA178C845596AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8912B6F5C005A6D7BFE3F3D2F0D1327 /* akulaiev2019.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/akulaiev2019/akulaiev2019-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/akulaiev2019/akulaiev2019.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = akulaiev2019;
+				PRODUCT_NAME = akulaiev2019;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8CD96ACEA899342F369C9B6522220A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27403D76C069EABCC541496E044F61E2 /* Pods-PersonnalDiary.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PersonnalDiary/Pods-PersonnalDiary.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5583CE810F9E38FC3E906D87C4688CDC /* Build configuration list for PBXNativeTarget "akulaiev2019" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452A12B95D928A5383889CFC7A79CD2C /* Debug */,
+				D0F823B220019E9E1DAA178C845596AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6677FFC7BC42BC5C5099B1C89EFA17D6 /* Build configuration list for PBXNativeTarget "Pods-PersonnalDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9082291BA286FDD29F00471596727907 /* Debug */,
+				F8CD96ACEA899342F369C9B6522220A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
